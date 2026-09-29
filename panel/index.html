@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Панель сети — Zebra Print</title>
+  <meta name="description" content="Тестовая панель управления киосками печати: связь, бумага, тонер и выручка.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="panel.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="side">
+      <a class="logo" href="../">Zebra Print</a>
+      <p class="side-note">Панель сети</p>
+      <nav>
+        <button type="button" class="nav-btn is-on" data-view="all">Все аппараты</button>
+        <button type="button" class="nav-btn" data-view="attention">Нужно внимание</button>
+        <button type="button" class="nav-btn" data-view="offline">Нет связи</button>
+      </nav>
+      <a class="back" href="../">К техническому заданию</a>
+    </aside>
+    <main class="main">
+      <header class="head">
+        <div>
+          <p class="eyebrow">Тестовые данные · срез 29 сентября 2026</p>
+          <h1>Сеть киосков</h1>
+        </div>
+        <p class="head-note" id="head-note"></p>
+      </header>
+      <section class="kpis" id="kpis"></section>
+      <section class="chart-card">
+        <div class="chart-head">
+          <div>
+            <h2 id="chart-title">Выручка сети</h2>
+            <p id="chart-sub"></p>
+          </div>
+          <div class="range" id="range">
+            <button type="button" data-range="14">14 дней</button>
+            <button type="button" data-range="30" class="is-on">30 дней</button>
+            <button type="button" data-range="6m">6 месяцев</button>
+          </div>
+        </div>
+        <div class="chart" id="chart"></div>
+      </section>
+      <section class="split">
+        <div class="table-card">
+          <table>
+            <thead>
+              <tr>
+                <th>Аппарат</th>
+                <th>Листы</th>
+                <th>Тонер</th>
+                <th class="num">Сегодня</th>
+              </tr>
+            </thead>
+            <tbody id="rows"></tbody>
+          </table>
+        </div>
+        <aside class="detail" id="detail"></aside>
+      </section>
+    </main>
+  </div>
+  <script src="panel.js"></script>
+</body>
+</html>
