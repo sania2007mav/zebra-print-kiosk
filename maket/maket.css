@@ -1,0 +1,115 @@
+:root {
+  --paper: #efeae2;
+  --ink: #1c1915;
+  --muted: #5e584f;
+  --green: #1d4a38;
+  --sans: "Manrope", "Segoe UI", sans-serif;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+}
+button, a { font: inherit; }
+button { cursor: pointer; }
+
+.stage {
+  display: grid;
+  grid-template-columns: minmax(280px, 420px) minmax(240px, 320px);
+  gap: 28px;
+  justify-content: center;
+  align-items: start;
+  padding: 28px 20px 48px;
+}
+.device {
+  background: #1c1915;
+  border-radius: 28px;
+  padding: 12px;
+}
+.glass {
+  position: relative;
+  aspect-ratio: 9 / 16;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #efefe8;
+}
+#shot { width: 100%; height: 100%; display: block; object-fit: fill; }
+#spots, #marks { position: absolute; inset: 0; }
+.spot {
+  position: absolute;
+  border: 0;
+  background: transparent;
+  padding: 0;
+}
+.tick {
+  position: absolute;
+  width: 2.1%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #1f6b45;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+.tick::after {
+  content: "";
+  position: absolute;
+  left: 28%;
+  top: 42%;
+  width: 42%;
+  height: 22%;
+  border-left: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transform: rotate(-45deg);
+}
+.price {
+  position: absolute;
+  left: 19%;
+  top: 96.4%;
+  margin: 0;
+  background: #fff;
+  color: #1c1915;
+  font-weight: 800;
+  font-size: clamp(16px, 2.4vw, 22px);
+  line-height: 1;
+  pointer-events: none;
+}
+#toast {
+  position: absolute;
+  left: 8%;
+  right: 8%;
+  top: 12%;
+  margin: 0;
+  background: #1c1915;
+  color: #f6f3ec;
+  border-radius: 14px;
+  padding: 12px 14px;
+  font-size: 14px;
+  text-align: center;
+}
+#toast[hidden] { display: none; }
+
+.remote h1 { margin: 0; font-family: "Fraunces", "Times New Roman", serif; font-size: 36px; font-weight: 560; }
+.eyebrow { margin: 0; color: #9d3d24; font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+.lead, .now { color: var(--muted); }
+.now { font-weight: 700; color: var(--ink); }
+.remote button {
+  display: block;
+  width: 100%;
+  margin: 8px 0;
+  padding: 14px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--green);
+  background: var(--green);
+  color: #f6f3ec;
+  font-weight: 700;
+}
+.links { display: flex; flex-direction: column; gap: 6px; }
+.links a { color: var(--green); font-weight: 700; }
+
+@media (max-width: 800px) {
+  .stage { grid-template-columns: 1fr; }
+  .glass { max-height: 82vh; }
+}
