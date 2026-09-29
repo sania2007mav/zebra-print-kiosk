@@ -8,4 +8,4 @@
 
 Эмулятор аппарата: https://sania2007mav.github.io/zebra-print-kiosk/kiosk/
 
-Эмулятор по картинкам из папки «Вендинг»: https://sania2007mav.github.io/zebra-print-kiosk/maket/
+Рабочий киоск в вёрстке макетов: https://sania2007mav.github.io/zebra-print-kiosk/maket/

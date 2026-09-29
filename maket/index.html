@@ -4,35 +4,39 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Киоск по макетам — Zebra Print</title>
-  <meta name="description" content="Эмулятор киоска на картинках из папки Вендинг: начальный экран, печать, сканирование, ксерокопия и реклама.">
+  <meta name="description" content="Рабочий киоск в вёрстке макетов: печать, ксерокопия, сканирование, оплата и реклама.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560&family=Manrope:wght@500;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="maket.css">
 </head>
 <body>
   <div class="stage">
     <div class="device">
       <div class="glass">
-        <img id="shot" alt="Экран киоска из макета">
-        <div id="spots"></div>
-        <div id="marks"></div>
-        <p id="toast" hidden></p>
+        <div id="view"></div>
       </div>
     </div>
     <aside class="remote">
-      <p class="eyebrow">Картинки из папки «Вендинг»</p>
+      <p class="eyebrow">Рабочий экран</p>
       <h1>Как на макетах</h1>
-      <p class="lead">Экран не перерисован: это файлы Начальная, 1, 2, 3 и Реклама. Нажатия только переключают эти картинки.</p>
+      <p class="lead">Это уже не кадры из папки. Вёрстка как у макетов «Принт-киоск», а кнопки проводят заказ до конца.</p>
       <p class="now" id="now"></p>
+      <ol>
+        <li>Печать: отметьте файл, сумма сменит 0 ₽, затем параметры, оплата и выдача.</li>
+        <li>Копия: «Сканировать» добавляет лист, «Распечатать» печатает пачку.</li>
+        <li>Скан: снимите страницу и сохраните. Файл появится на флешке в печати.</li>
+        <li>Шестерёнка включает рекламу. По умолчанию она выходит через 8 секунд простоя.</li>
+      </ol>
       <button type="button" id="home">На начальный экран</button>
       <p class="links">
-        <a href="../kiosk/">Другой эмулятор</a>
+        <a href="../kiosk/">Упрощённый эмулятор</a>
         <a href="../panel/">Панель сети</a>
         <a href="../">Техническое задание</a>
       </p>
     </aside>
   </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
   <script src="maket.js"></script>
 </body>
 </html>
