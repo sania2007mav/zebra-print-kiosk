@@ -5,3 +5,5 @@
 Сайт: https://sania2007mav.github.io/zebra-print-kiosk/
 
 Тестовая панель управления: https://sania2007mav.github.io/zebra-print-kiosk/panel/
+
+Эмулятор аппарата: https://sania2007mav.github.io/zebra-print-kiosk/kiosk/

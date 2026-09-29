@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Эмулятор киоска — Zebra Print</title>
+  <meta name="description" content="Эмуляция экрана вендингового аппарата печати: реклама, флешка, копия, скан и тестовый QR Kaspi.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="kiosk.css">
+</head>
+<body>
+  <div class="stage">
+    <div class="device">
+      <div class="glass">
+        <div id="view"></div>
+        <button id="hotspot" type="button" aria-label="Удержать для служебного меню"></button>
+      </div>
+    </div>
+    <aside class="remote">
+      <p class="eyebrow">Пульт эмуляции</p>
+      <h1>Аппарат ZP-01</h1>
+      <p class="lead">Экран слева ведёт себя как киоск. Деньги не списываются. Тариф демонстрационный: лист 150 ₸, скан 200 ₸.</p>
+      <p class="now" id="now">Сейчас: реклама</p>
+      <button type="button" id="pay" disabled>Клиент оплатил в Kaspi</button>
+      <button type="button" id="jam" class="ghost" disabled>Замять бумагу</button>
+      <button type="button" id="reset" class="ghost">Вернуть рекламу</button>
+      <p class="hint">Служебное меню: удержите тёмную точку в правом верхнем углу экрана. PIN <b>1234</b>.</p>
+      <p class="links"><a href="../panel/">Панель сети</a><a href="../">Техническое задание</a></p>
+    </aside>
+  </div>
+  <script src="kiosk.js"></script>
+</body>
+</html>
